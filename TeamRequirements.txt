@@ -1,0 +1,15 @@
+Space Cow
+Meg and Mac
+Requirements
+
+
+1. Mulit Intent(Home Page,and 2 or more levels)
+2. space moving backgrounds
+3. cow has to follow touch
+4. obstacles that scroll
+5. Home Button
+6. Pause Button
+7. Score
+8. High Score Keeper Upper
+9. reaction with different screen to collision (cow falls?)
+10. Collision detection
