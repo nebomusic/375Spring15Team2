@@ -13,28 +13,29 @@
     <TableRow
         android:id="@+id/tableRow1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:gravity="center" >
 
-        <Button
-            android:id="@+id/buttonBeginner"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:onClick="handleClick"
-            android:text="Beginner" />
+        <ImageButton
+            android:id="@+id/imageButtonOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_one" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content" 
+        android:gravity="center">
 
-        <Button
-            android:id="@+id/buttonExpert"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:onClick="handleClick"
-            android:text="Expert" />
+        <ImageButton
+            android:id="@+id/imageButtonTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_two" />
+
     </TableRow>
 
 </LinearLayout>

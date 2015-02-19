@@ -13,13 +13,13 @@ public class MainActivity extends Activity {
 	public void handleClick(View v) {
 		//which clicked
 		switch(v.getId()) {
-		case R.id.buttonBeginner:
+		case R.id.imageButtonOne:
 			//new intent
 			Intent intentOne = new Intent(this, Beginner.class);
 			//start intent
 			startActivity(intentOne);
 			break;
-		case R.id.buttonExpert:
+		case R.id.imageButtonTwo:
 			//create new intent
 			Intent intentTwo = new Intent(this, Expert.class);
 			startActivity(intentTwo);
