@@ -22,6 +22,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Beginner"
+            android:label="Beginner"
+            android:parentActivityName="com.example.spacecow.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.spacecow.MainActivity"
+                />
+            
+        </activity>
+        
+        <activity
+            android:name=".Expert"
+            android:label="Expert"
+            android:parentActivityName="com.example.spacecow.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.spacecow.MainActivity"
+                />
+            </activity>
     </application>
-
+    
 </manifest>
+

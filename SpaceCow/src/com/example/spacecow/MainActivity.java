@@ -1,17 +1,41 @@
 package com.example.spacecow;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends Activity {
-
+//Function to switch intents
+	public void handleClick(View v) {
+		//which clicked
+		switch(v.getId()) {
+		case R.id.buttonBeginner:
+			//new intent
+			Intent intentOne = new Intent(this, Beginner.class);
+			//start intent
+			startActivity(intentOne);
+			break;
+		case R.id.buttonExpert:
+			//create new intent
+			Intent intentTwo = new Intent(this, Expert.class);
+			startActivity(intentTwo);
+			break;
+		}//end switch
+	}//end handle click
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+    
+    @Override
+    protected void onResume() {
+    	super.onResume();
+    	setContentView(R.layout.activity_main);
     }
 
 
