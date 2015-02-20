@@ -2,7 +2,9 @@ package com.example.spacecow;
 
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.graphics.drawable.BitmapDrawable;
 import android.app.Activity;
+import android.content.Context;
 
 public class Actor {
 
@@ -14,9 +16,16 @@ public class Actor {
 	private int dy; //y speed
 	private Paint paint; //paint object 
 	
+	//context
+	private Context aContext;
 	
+	//integer for drawable resource
+	private int costume;
+	
+	//stores for graphic costume
+	private BitmapDrawable graphic;
 	//Constructor
-	public Actor(int x, int y, int col, int size) {
+	public Actor(Context context, int x, int y, int col, int size) {
 		
 		//initialize values
 		p = new Point(x, y); //set x,y position
@@ -27,8 +36,11 @@ public class Actor {
 		dx = 20;
 		dy = 10;
 		
-		//functions
+		//set the context
 		
+		aContext = context;
+		
+	}//end constructor	
 		//accessors
 		public int getX() {
 			return p.x;
@@ -65,7 +77,19 @@ public class Actor {
 			dx += a;
 		}
 		
+		public void changeDY(float a) {
+			dy += a;
+		}
 		
+		public void move() {
+			p.x += dx;
+			p.y += dy;
+		}
+		//setters
 		
-	}//end constructor
+		public void setCostume(int cost) {
+			costume = cost;
+			graphic = (BitmapDrawable)aContext.getResources().getDrawable(costume);
+		}
+	
 }//end class
