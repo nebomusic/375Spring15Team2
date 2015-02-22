@@ -1,5 +1,7 @@
 package com.example.spacecow;
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
@@ -92,4 +94,11 @@ public class Actor {
 			graphic = (BitmapDrawable)aContext.getResources().getDrawable(costume);
 		}
 	
+		public Bitmap getBitmap() {
+			return graphic.getBitmap();
+		}
+		
+		public void draw(Canvas c) {
+			c.drawBitmap(getBitmap(), p.x, p.y, paint);
+		}
 }//end class
