@@ -55,9 +55,18 @@ public class AnimationView extends View {
 	
 	}//on Touch
 	public void onDraw(Canvas c) {
-		//actors move
 		//actors draw
 		cow.draw(c);
+		
+		//Read Accel data and move
+		cow.changeDX(ax * -1); //read x
+		cow.changeDY(ay);		//read y
+		cow.move();
+		
+		//actors draw themselves
+		cow.draw(c);
+		
+		
 		
 		//call the Runnable
 		h.postDelayed(r, RATE);
