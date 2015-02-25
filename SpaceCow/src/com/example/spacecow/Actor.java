@@ -26,6 +26,7 @@ public class Actor {
 	
 	//stores for graphic costume
 	private BitmapDrawable graphic;
+	
 	//Constructor
 	public Actor(Context context, int x, int y, int col, int size) {
 		
@@ -39,9 +40,7 @@ public class Actor {
 		dy = 10;
 		
 		//set the context
-		
 		aContext = context;
-		
 	}//end constructor	
 		//accessors
 		public int getX() {
