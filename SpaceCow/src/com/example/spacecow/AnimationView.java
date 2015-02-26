@@ -3,6 +3,7 @@ package com.example.spacecow;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.hardware.SensorManager;
 import android.os.Handler;
 import android.util.AttributeSet;
@@ -17,9 +18,10 @@ public class AnimationView extends View {
 	
 	//create some actors
 			private Actor cow;
-			
+			private Paint p;
 	//Sensor manager for accelerometer
 	private SensorManager sensorManager;
+		private int score = 0;
 			
 			
 	//values for accel data
@@ -56,9 +58,18 @@ public class AnimationView extends View {
 		
 	
 	}//on Touch
+	
+	private void changeScore () {
+		score++;
+	}
+	
 	public void onDraw(Canvas c) {
+		
+		c.drawText(String.valueOf(score), 100, 100, p);
+		
 		//actors draw
 		cow.draw(c);
+		changeScore();
 		
 		//Read Accel data and move
 		cow.changeDX(ax * -1); //read x
@@ -80,6 +91,12 @@ public class AnimationView extends View {
 		public void run() {
 		// TODO Auto-generated constructor stub
 			invalidate();
+		}
+		
+		public void score() {
+			score = 0;
+			p = new Paint();
+			p.setColor(Color.WHITE);
 		}
 		
 
