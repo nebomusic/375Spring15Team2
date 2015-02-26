@@ -5,4 +5,9 @@
     android:background="@drawable/genericspace"
     android:orientation="vertical" >
 
+    <com.example.spacecow.AnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </LinearLayout>

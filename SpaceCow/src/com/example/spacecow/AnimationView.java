@@ -38,9 +38,11 @@ public class AnimationView extends View {
 		//function to grab touch event data
 	
 		//initialize cow
-		cow = new Actor(context, 300, 300, Color.BLUE, 50);
+		cow = new Actor(context, 300, 300, Color.BLUE, 30);
 		cow.setCostume(R.drawable.cow);
 	
+		
+		h=new Handler();
 	}//end on create
 		
 	public boolean onTouchEvent(MotionEvent event) {
