@@ -52,7 +52,7 @@ public class AnimationView extends View {
 		int actionIdex = event.getActionIndex();//index of action
 		
 		//set Position of cow to touch data
-		cow.goTo((int)event.getX(), (int)event.getY());
+		cow.goTo((int)event.getX()-cow.w/2, (int)event.getY()-cow.h/2);
 					
 		return true;
 		
@@ -72,9 +72,9 @@ public class AnimationView extends View {
 		changeScore();
 		
 		//Read Accel data and move
-		cow.changeDX(ax * -1); //read x
-		cow.changeDY(ay);		//read y
-		cow.move();
+		//cow.changeDX(ax * -1); //read x
+		//cow.changeDY(ay);		//read y
+		//cow.move();
 		
 		//actors draw themselves
 		cow.draw(c);

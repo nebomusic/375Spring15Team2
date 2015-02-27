@@ -17,6 +17,9 @@ public class Actor {
 	private int dx; //x speed
 	private int dy; //y speed
 	private Paint paint; //paint object 
+	public int w = 50;
+	public int h = 50;
+	
 	
 	//context
 	private Context aContext;
@@ -91,6 +94,8 @@ public class Actor {
 		public void setCostume(int cost) {
 			costume = cost;
 			graphic = (BitmapDrawable)aContext.getResources().getDrawable(costume);
+			w = graphic.getBitmap().getWidth();
+			h = graphic.getBitmap().getHeight();
 		}
 	
 		public Bitmap getBitmap() {
