@@ -19,6 +19,11 @@ public class AnimationView extends View {
 	//create some actors
 			private Actor cow;
 			private Paint p;
+			private Actor greenalien ;
+			private Actor redalien;
+			private Actor bluealien;
+			private Actor scaryalien;
+			
 	//Sensor manager for accelerometer
 	private SensorManager sensorManager;
 		private int score = 0;
