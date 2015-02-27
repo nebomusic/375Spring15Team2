@@ -21,7 +21,6 @@ public class AnimationView extends View {
 			private Paint p;
 			private Actor greenalien ;
 			private Actor redalien;
-			private Actor bluealien;
 			private Actor scaryalien;
 			
 	//Sensor manager for accelerometer
@@ -47,6 +46,10 @@ public class AnimationView extends View {
 		//initialize cow
 		cow = new Actor(context, 300, 300, Color.BLUE, 30);
 		cow.setCostume(R.drawable.cow);
+		
+		//initialize aliens
+		greenalien = new Actor(context, 300, 300, Color.BLUE, 30);
+		greenalien.setCostume(R.drawable.greenalien);
 	
 		
 		h=new Handler();
