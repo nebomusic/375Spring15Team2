@@ -65,7 +65,7 @@ public class AnimationView extends View {
 	
 	public void onDraw(Canvas c) {
 		
-		c.drawText(String.valueOf(score), 100, 100, p);
+		// c.drawText(String.valueOf(score), 100, 100, p);
 		
 		//actors draw
 		cow.draw(c);

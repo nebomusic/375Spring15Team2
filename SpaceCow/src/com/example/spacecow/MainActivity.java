@@ -16,76 +16,41 @@ import android.view.View;
 public class MainActivity extends Activity {
 		//Fields for animation view
 		private AnimationView animationView;
-		
-		//Sensor Manager for Accelerometer 
-		private SensorManager sensorManager;
 	
-//Function to switch intents
-public void handleClick(View v) {
-//which clicked
-	switch(v.getId()) {
-	case R.id.imageButtonOne:
-		//new intent
-		Intent intentOne = new Intent(this, Beginner.class);
-		//start intent
-		startActivity(intentOne);
-		break;
-	case R.id.imageButtonTwo:
-		//create new intent
-		Intent intentTwo = new Intent(this, Expert.class);
-		startActivity(intentTwo);
-		break;
-		}//end switch
-	}//end handle click
+
    @Override
    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
    
-        //intialize animation view
-     animationView = (AnimationView)findViewById(R.id.animationView);
-    
-   
-       //enable listener
-    enableAccelerometerListening();
-  
-   
-    //initialize the sensor manager
-	sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-	sensorManager.registerListener(sensorEventListener, 
-			sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), 
-			SensorManager.SENSOR_DELAY_NORMAL);
+
+
     
     }
+   
+ //Function to switch intents
+   public void handleClick(View v) {
+   //which clicked
+   	switch(v.getId()) {
+   	case R.id.imageButtonOne:
+   		//new intent
+   		Intent intentOne = new Intent(this, Beginner.class);
+   		//start intent
+   		startActivity(intentOne);
+   		break;
+   	case R.id.imageButtonTwo:
+   		//create new intent
+   		Intent intentTwo = new Intent(this, Expert.class);
+   		startActivity(intentTwo);
+   		break;
+   		}//end switch
+   	}//end handle click
     
     
     private void enableAccelerometerListening() {
 	// TODO Auto-generated method stub
     		
 }
-    
-    private SensorEventListener sensorEventListener = 
-    		new SensorEventListener() {
-    	@Override
-    	public void onAccuracyChanged(Sensor arg0, int arg1) {
-    		//TODO Auto-generated method stub
-    		//Not Used
-    		
-    	}
-    	
-    	@Override
-    	public void onSensorChanged(SensorEvent event) {
-    		//gather the xyz from accel
-    		float x = event.values[0];
-    		float y = event.values[1];
-    		float z = event.values[2];
-    		
-    		//pass the values to AnimationView object
-    		animationView.setAX(x);
-    		animationView.setAY(y);
-    		animationView.setAZ(z);
-    	}
-    };// end sensor event listener
 	@Override
     protected void onResume() {
     	super.onResume();
