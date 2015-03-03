@@ -19,9 +19,9 @@ public class AnimationView extends View {
 	//create some actors
 			private Actor cow;
 			private Paint p;
-			private Actor greenalien ;
+			private Actor aliengreen ;
 			private Actor redalien;
-			private Actor scaryalien;
+			private Actor scaryAlien;
 			
 	//Sensor manager for accelerometer
 	private SensorManager sensorManager;
@@ -48,9 +48,17 @@ public class AnimationView extends View {
 		cow.setCostume(R.drawable.cow);
 		
 		//initialize aliens
-		greenalien = new Actor(context, 300, 300, Color.BLUE, 30);
-		greenalien.setCostume(R.drawable.greenalien);
+		aliengreen = new Actor(context, 300, 300, Color.RED, 30);
+		aliengreen.setCostume(R.drawable.greenalien);
 	
+		scaryAlien = new Actor(context, 300, 300, Color.RED, 30);
+		scaryAlien.setCostume(R.drawable.scaryAlien);
+		
+		redalien = new Actor(context, 300, 300, Color.RED, 30);
+		redalien.setCostume(R.drawable.redAlien);
+		
+		
+		
 		
 		h=new Handler();
 	}//end on create

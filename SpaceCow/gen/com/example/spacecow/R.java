@@ -30,6 +30,9 @@ public final class R {
         public static final int ic_launcher=0x7f020005;
         public static final int space=0x7f020006;
         public static final int spaces=0x7f020007;
+        public static final int greenalien= 0x7f020008;
+        public static final int scaryAlien= 0x7f020009;
+		public static final int redAlien= 0x7f020010;
     }
     public static final class id {
         public static final int LinearLayout2=0x7f080001;
